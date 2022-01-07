@@ -20,4 +20,8 @@
    var_dump($x);
    echo "<br/>";
 
+   // last date of code update
+   echo "Last Modified: " . date("F d Y H:i:s.", getlastmod());
+   echo "<br/>";
+
 ?>
