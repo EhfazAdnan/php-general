@@ -55,4 +55,37 @@
    // 40 done
    // url : https://www.youtube.com/watch?v=LaoPmE9ywhQ&list=PLH1n1sJO7tbyw7z4FNIrqsF2hZkEoKRf2&index=41
 
+   // combine and merge array
+
+   $array1 = array(array(77,87), array(23,45));
+   $array2 = array("w3School","com");
+
+   function merge_arrays_by_index($x, $y){
+       $temp = array();
+       $temp[] = $x;
+       
+       if(is_scalar($y)){
+           $temp[] = $y;
+       }else{
+           foreach($y as $k => $v){
+               $temp[] = $v;
+           }
+       }
+
+       return $temp;
+   }
+
+   echo '<pre>';
+   print_r(array_map('merge_arrays_by_index',$array1,$array2));
+
+
+   // random number generate
+   $n = range (11, 20);
+   shuffle($n);
+
+   for ($x = 0; $x < 10; $x++){
+       echo $n[$x];
+   }
+   echo "<br/>";
+
 ?>
