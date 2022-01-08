@@ -128,6 +128,56 @@
    
    // insert hypen
 
-   
+   for($x = 1; $x <= 10; $x++){
+      if($x < 10){
+        echo "$x-";
+      }else{
+          echo "$x";
+      }
+   }
+   echo "<br/>";
+
+   // factorial number
+
+   $n = 6;
+   $x = 1;
+   for ($i = 1; $i <= $n-1; $i++){
+       $x *= ($i+1);
+   }
+   echo "Factorial : $n = $x";
+   echo "<br/>";
+
+   // shortest longest lenth array
+   $my_array = array("abcd","abc","de","hjjj","g","war");
+   $new_array = array_map('strlen', $my_array);
+
+   echo "The shortest array length is " . min($new_array);
+   echo "<br/>";
+   echo "The shortest array length is " . max($new_array);
+   echo "<br/>";
+
+   // insert a new item in an array
+
+   $original = array('1','2','3','4','5');
+   echo 'Original array : ';
+   foreach($original as $x){
+       echo $x;
+   }
+   $inserted = '$';
+   array_splice($original, 3, 0, $inserted);
+   echo " \n After inserted '$' the array is : ";
+   echo "<br/>";
+   foreach($original as $x){
+     echo "$x";
+   }
+   echo "<br/>";
+
+   // get element of an array
+   $color = array(4 => 'white', 6 => 'green', 11 => 'red');
+   echo reset($color);
+   echo "<br/>";
+
+
+   // part 50 done
    
    ?>
