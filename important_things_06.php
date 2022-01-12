@@ -194,5 +194,75 @@
    }
 
    echo multiple_two_array(("10 12 3"),('3 4 6'));
-   
+   echo "<br/>";
+
+   // display array key with values
+
+   $arr = array("one" => '1', "two" => "2");
+   asort($arr);
+   foreach($arr as $key => $val){
+       echo $key .' - '. $val;
+       echo "<br/>";
+   }
+
+   echo "<br/>";
+
+   // find document root
+
+   $root = getenv('DOCUMENT_ROOT');
+   echo $root;
+   echo "<br/>";
+   echo "<br/>";
+
+   // get temporary file path
+
+   $temp_file = tempnam(sys_get_temp_dir(), 'Tux');
+   echo $temp_file;
+   echo "<br/>";
+
+   // swap two variables
+   $a = 15;
+   $b = 27;
+   echo "<br/>";
+   echo "The number before swapping is: ";
+   echo "<br/>";
+   echo "Number a =" . $a ." and b = " .$b;
+   echo "<br/>";
+
+   $temp = $a;
+   $a = $b;
+   $b = $temp;
+
+   echo "<br/>";
+   echo "The number before swapping is: ";
+   echo "<br/>";
+   echo "Number a =" . $a ." and b = " .$b;
+   echo "<br/>";
+
+   echo "<br/>";
+   echo "<br/>";
+
+
+   // get os information
+   echo php_uname();
+   echo "<br/>";
+   echo PHP_OS;
+   echo "<br/>";
+
+
+   // count specific characters from string
+
+   $text = "Hello world";
+   $search_word = "l";
+   $count  = 0;
+
+   for($x = 0; $x < strlen($text); $x++){
+       if(substr($text,$x,1) == $search_word){
+           $count = $count+1;
+       }
+   }
+
+   echo $count;
+   echo "<br/>";
+
    ?>
