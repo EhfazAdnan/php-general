@@ -179,5 +179,20 @@
 
 
    // part 50 done
+
+   // multiple elements of two arrays
+
+   function multiple_two_array($x,$y){
+       $a = explode(' ', trim($x));
+       $b = explode(' ', trim($y));
+
+       foreach($a as $key => $value){
+           $output[$key] = $a[$key]*$b[$key];
+       }
+
+       return implode(' ',$output);
+   }
+
+   echo multiple_two_array(("10 12 3"),('3 4 6'));
    
    ?>
