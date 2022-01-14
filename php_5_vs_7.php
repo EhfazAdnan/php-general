@@ -56,17 +56,57 @@
 
 // Integer division function => intdiv()
 
+/* $a = 30;
+$b = 4;
+echo $c = $a / $b;
+echo "<br/>";
+echo $d = intdiv($a,$b); */
+
+
+/* --------------------------------------------------------------------------- */
+
 
 // execption handleing -> try - catch - finally
+
+/* 1. throwable interface
+2. error class
+3. error & exception handling
+4. fatal, type and parse errors
+5. reserved words 
+resource : eduonix learning solutions
+URL: https://www.youtube.com/watch?v=B9p5Tjj-q8E
+*/
+
+
+/* --------------------------------------------------------------------------- */
 
 
 // closure::call() method
 
 
+/* --------------------------------------------------------------------------- */
+
+
 // anonymous classes
+// not available a user define name for a class
+
+/* Use when
+-> not need to documented the class
+-> use only once
+-> when class is simple, one-off objects need to be created
+
+$obj - new Class {
+    // where all property and methods
+} */
+
+
+/* --------------------------------------------------------------------------- */
 
 
 // combined / spaceship operator <=>
+
+/* $a <=> $b
+If returns -1, 0, 1 when $a is respectively less than, equal to or greater than $b */
 
 
 /* --------------------------------------------------------------------------- */
@@ -85,5 +125,33 @@ echo $name1 = $_GET['name1'] ?? "Not found"; */
 
 // constant array
 
-define('arrayName',['1','2','3','4','5']);
-print_r(arrayName[2]);
+// define('arrayName',['1','2','3','4','5']);
+// print_r(arrayName[2]);
+
+
+/* --------------------------------------------------------------------------- */
+
+
+// anonymous function ; also calls as closures ; also they are call back functions
+
+/* (function(){
+    echo 'anonymous function';
+})(); */
+
+/* $one = '1';
+$two = '2';
+$myFunction = function()use($one,$two){
+    echo $one;
+    echo "<br/>";
+    echo $two;
+};
+$myFunction(); */
+
+/* $one = '1';
+$two = '2';
+$myFunction = (function()use($one,$two){
+    echo $one;
+    echo "<br/>";
+    echo $two;
+})();
+ */
